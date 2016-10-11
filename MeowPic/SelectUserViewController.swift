@@ -9,7 +9,7 @@
 import UIKit
 
 class SelectUserViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -17,15 +17,16 @@ class SelectUserViewController: UIViewController, UITableViewDelegate, UITableVi
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
-
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        return UITableViewCell()
     }
-
+    
+    
 }
