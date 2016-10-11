@@ -1,14 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="MeowPic" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +17,198 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MeowPic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krF-aT-cgQ">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="49"/>
+                                <color key="textColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="jack@meow.com" borderStyle="roundedRect" placeholder="email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xEM-M2-bbi">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="nUS-g9-hdN"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="lololol" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bEc-04-LJ4">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="lLU-CH-Fn9"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRR-jL-yjP">
+                                <state key="normal" title="Get Meow'd">
+                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="GetMeowdTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JmP-7k-wzy"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xEM-M2-bbi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6g6-6v-TUB"/>
+                            <constraint firstItem="cRR-jL-yjP" firstAttribute="top" secondItem="bEc-04-LJ4" secondAttribute="bottom" constant="30" id="WRW-nz-yfE"/>
+                            <constraint firstItem="bEc-04-LJ4" firstAttribute="top" secondItem="xEM-M2-bbi" secondAttribute="bottom" constant="30" id="WwW-x2-Qx3"/>
+                            <constraint firstItem="bEc-04-LJ4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xe4-3W-vGv"/>
+                            <constraint firstItem="bEc-04-LJ4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xup-bt-PzI"/>
+                            <constraint firstItem="xEM-M2-bbi" firstAttribute="top" secondItem="krF-aT-cgQ" secondAttribute="bottom" constant="55" id="bY1-ch-C2k"/>
+                            <constraint firstItem="krF-aT-cgQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="blW-WW-7PB"/>
+                            <constraint firstItem="cRR-jL-yjP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lAw-xl-X6p"/>
+                            <constraint firstItem="krF-aT-cgQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="la7-07-0eb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="xEM-M2-bbi" id="PWM-ni-FdS"/>
+                        <outlet property="passwordTextField" destination="bEc-04-LJ4" id="ea7-2l-Afb"/>
+                        <segue destination="1tO-ki-yDU" kind="presentation" identifier="signInSegue" id="tiX-pg-M8r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--MeowPic-->
+        <scene sceneID="ZL3-2c-xpW">
+            <objects>
+                <viewController id="ytz-x2-Czd" customClass="PicsViewController" customModule="MeowPic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iwv-L5-gzo"/>
+                        <viewControllerLayoutGuide type="bottom" id="4em-ni-YsT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="m8B-lH-ffA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="MeowPic" id="O0A-OA-Unf">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="aZI-x2-X48">
+                            <connections>
+                                <action selector="logoutTapped:" destination="ytz-x2-Czd" id="6Xp-xt-Bac"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hpe-ND-ssY">
+                            <connections>
+                                <segue destination="yzV-FI-eN7" kind="show" id="5fe-1b-aPz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g24-iT-zsm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1657" y="45"/>
+        </scene>
+        <!--Picture View Controller-->
+        <scene sceneID="RnJ-Sf-tpS">
+            <objects>
+                <viewController id="yzV-FI-eN7" customClass="PictureViewController" customModule="MeowPic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jWE-XF-ytT"/>
+                        <viewControllerLayoutGuide type="bottom" id="LRv-UU-mtG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wLM-qZ-ZKJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PxT-dJ-KG1">
+                                <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="Q65-1n-UdH"/>
+                                    <constraint firstAttribute="width" constant="240" id="nbf-zr-hp4"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Caption..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YET-uO-c9w">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4F-1y-Nu3">
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextTapped:" destination="yzV-FI-eN7" eventType="touchUpInside" id="dCD-pA-HW3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PxT-dJ-KG1" firstAttribute="centerX" secondItem="wLM-qZ-ZKJ" secondAttribute="centerX" id="5X4-5C-Zx4"/>
+                            <constraint firstItem="YET-uO-c9w" firstAttribute="top" secondItem="PxT-dJ-KG1" secondAttribute="bottom" constant="20" id="Ecg-lJ-Zi8"/>
+                            <constraint firstItem="YET-uO-c9w" firstAttribute="centerX" secondItem="wLM-qZ-ZKJ" secondAttribute="centerX" id="J9T-dl-cLK"/>
+                            <constraint firstItem="YET-uO-c9w" firstAttribute="width" secondItem="PxT-dJ-KG1" secondAttribute="width" id="Zml-d0-bGA"/>
+                            <constraint firstItem="X4F-1y-Nu3" firstAttribute="top" secondItem="YET-uO-c9w" secondAttribute="bottom" constant="15" id="coH-vE-oBw"/>
+                            <constraint firstItem="X4F-1y-Nu3" firstAttribute="centerX" secondItem="wLM-qZ-ZKJ" secondAttribute="centerX" id="dy4-rs-VXZ"/>
+                            <constraint firstItem="PxT-dJ-KG1" firstAttribute="top" secondItem="jWE-XF-ytT" secondAttribute="bottom" constant="20" id="mBm-Q8-Td6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="VEs-My-qlw">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="t1D-aL-6Je">
+                            <connections>
+                                <action selector="cameraTapped:" destination="yzV-FI-eN7" id="fF8-qc-W3l"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="captionTextField" destination="YET-uO-c9w" id="3lx-Oi-edX"/>
+                        <outlet property="imageView" destination="PxT-dJ-KG1" id="CaX-vF-wt7"/>
+                        <outlet property="nextButton" destination="X4F-1y-Nu3" id="4zB-Cv-t7I"/>
+                        <segue destination="pck-EK-kfV" kind="show" identifier="selectUserSegue" id="Dvz-JR-F3d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xoF-xe-9L7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2515" y="41"/>
+        </scene>
+        <!--Select User View Controller-->
+        <scene sceneID="q4b-1G-91T">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="pck-EK-kfV" customClass="SelectUserViewController" customModule="MeowPic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="t6v-jN-V1k"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vfm-LU-qVP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="l0l-mI-H4N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2B4-j3-3UP">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2B4-j3-3UP" firstAttribute="top" secondItem="t6v-jN-V1k" secondAttribute="bottom" id="0Q8-6T-XcF"/>
+                            <constraint firstAttribute="trailing" secondItem="2B4-j3-3UP" secondAttribute="trailing" id="Jfs-1b-qhT"/>
+                            <constraint firstItem="Vfm-LU-qVP" firstAttribute="top" secondItem="2B4-j3-3UP" secondAttribute="bottom" id="tPC-cg-b5U"/>
+                            <constraint firstItem="2B4-j3-3UP" firstAttribute="leading" secondItem="l0l-mI-H4N" secondAttribute="leading" id="ulp-aA-0yf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="2B4-j3-3UP" id="jCP-6G-Dxc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uKV-Ou-IlN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3321" y="41"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hwZ-Gi-SBE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1tO-ki-yDU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Czc-4J-HAA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ytz-x2-Czd" kind="relationship" relationship="rootViewController" id="oYZ-oi-MzT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oAZ-zy-4JV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="831" y="45"/>
         </scene>
     </scenes>
 </document>
