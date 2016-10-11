@@ -96,6 +96,7 @@
 				TargetAttributes = {
 					04B1850C1DAD126800B41081 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = RT4QFZ8D57;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -260,6 +261,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RT4QFZ8D57;
 				INFOPLIST_FILE = MeowPic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Jack-Taylor.MeowPic";
@@ -272,6 +274,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RT4QFZ8D57;
 				INFOPLIST_FILE = MeowPic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Jack-Taylor.MeowPic";
