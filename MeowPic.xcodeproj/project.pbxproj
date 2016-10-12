@@ -16,7 +16,7 @@
 		04B185271DAD26BD00B41081 /* PicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B185261DAD26BD00B41081 /* PicsViewController.swift */; };
 		04B185291DAD29B700B41081 /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B185281DAD29B700B41081 /* PictureViewController.swift */; };
 		04B1852B1DAD84E700B41081 /* SelectUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1852A1DAD84E700B41081 /* SelectUserViewController.swift */; };
-		8EA07D3AFCFE6696AD4BC8D5 /* Pods_MeowPic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A791AE5BF7FCB40F14824FD1 /* Pods_MeowPic.framework */; };
+		04B1854F1DAE656500B41081 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1854E1DAE656500B41081 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +31,9 @@
 		04B185261DAD26BD00B41081 /* PicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicsViewController.swift; sourceTree = "<group>"; };
 		04B185281DAD29B700B41081 /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
 		04B1852A1DAD84E700B41081 /* SelectUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUserViewController.swift; sourceTree = "<group>"; };
+		04B1854E1DAE656500B41081 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		360AAD16352C2C0C96593563 /* Pods-MeowPic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowPic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeowPic/Pods-MeowPic.debug.xcconfig"; sourceTree = "<group>"; };
 		A2D5CC27ABF2E0CA2981F53A /* Pods-MeowPic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowPic.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeowPic/Pods-MeowPic.release.xcconfig"; sourceTree = "<group>"; };
-		A791AE5BF7FCB40F14824FD1 /* Pods_MeowPic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeowPic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +41,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EA07D3AFCFE6696AD4BC8D5 /* Pods_MeowPic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,18 +68,35 @@
 		04B1850F1DAD126800B41081 /* MeowPic */ = {
 			isa = PBXGroup;
 			children = (
-				04B185101DAD126800B41081 /* AppDelegate.swift */,
-				04B185241DAD1B1000B41081 /* LoginViewController.swift */,
-				04B185261DAD26BD00B41081 /* PicsViewController.swift */,
-				04B185281DAD29B700B41081 /* PictureViewController.swift */,
-				04B1852A1DAD84E700B41081 /* SelectUserViewController.swift */,
 				04B185141DAD126800B41081 /* Main.storyboard */,
+				04B185501DAE65A300B41081 /* ViewControllers */,
+				04B185101DAD126800B41081 /* AppDelegate.swift */,
 				04B185171DAD126800B41081 /* Assets.xcassets */,
 				04B185191DAD126800B41081 /* LaunchScreen.storyboard */,
 				04B1851C1DAD126800B41081 /* Info.plist */,
 				04B185221DAD146600B41081 /* GoogleService-Info.plist */,
 			);
 			path = MeowPic;
+			sourceTree = "<group>";
+		};
+		04B185501DAE65A300B41081 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				04B185241DAD1B1000B41081 /* LoginViewController.swift */,
+				04B185261DAD26BD00B41081 /* PicsViewController.swift */,
+				04B185281DAD29B700B41081 /* PictureViewController.swift */,
+				04B1852A1DAD84E700B41081 /* SelectUserViewController.swift */,
+				04B185511DAE65DF00B41081 /* Models */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		04B185511DAE65DF00B41081 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04B1854E1DAE656500B41081 /* User.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		2C9D9BC3EB3BBAE73BFC0A4C /* Pods */ = {
@@ -95,7 +111,6 @@
 		61CFF5F12734345B6F246C02 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A791AE5BF7FCB40F14824FD1 /* Pods_MeowPic.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -227,6 +242,7 @@
 			files = (
 				04B185251DAD1B1000B41081 /* LoginViewController.swift in Sources */,
 				04B185291DAD29B700B41081 /* PictureViewController.swift in Sources */,
+				04B1854F1DAE656500B41081 /* User.swift in Sources */,
 				04B1852B1DAD84E700B41081 /* SelectUserViewController.swift in Sources */,
 				04B185271DAD26BD00B41081 /* PicsViewController.swift in Sources */,
 				04B185111DAD126800B41081 /* AppDelegate.swift in Sources */,

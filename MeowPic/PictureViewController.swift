@@ -61,12 +61,16 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
                 print("error!!!!:\(error)")
             } else {
                 print(metadata?.downloadURL())
-                self.performSegue(withIdentifier: "selectUserSegue", sender: nil)
+                self.performSegue(withIdentifier: "selectUserSegue", sender: metadata?.downloadURL()!.absoluteString)
             }
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let nextViewController = segue.destination as! SelectUserViewController
+        nextViewController.imageURL = sender as! String
+        nextViewController.caption = captionTextField.text!
         
         
     }
