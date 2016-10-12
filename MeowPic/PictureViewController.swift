@@ -20,10 +20,13 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     var imagePicker = UIImagePickerController()
     
+    var uuid = NSUUID().uuidString
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         imagePicker.delegate = self
+        nextButton.isEnabled = false
         
     }
     
@@ -32,12 +35,13 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         imageView.image = image
         imageView.backgroundColor = UIColor.clear
+        nextButton.isEnabled = true
         imagePicker.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func cameraTapped(_ sender: AnyObject) {
         
-        imagePicker.sourceType = .savedPhotosAlbum
+        imagePicker.sourceType = .camera
         imagePicker.allowsEditing = false
         
         present(imagePicker, animated: true, completion: nil)
@@ -55,7 +59,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         
         
-        imagesFolder.child("\(NSUUID().uuidString).jpg").put(imageData, metadata: nil) { (metadata, error) in
+        imagesFolder.child("\(uuid).jpg").put(imageData, metadata: nil) { (metadata, error) in
             print("Upload attempted")
             if error != nil {
                 print("error!!!!:\(error)")
@@ -71,6 +75,7 @@ class PictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         let nextViewController = segue.destination as! SelectUserViewController
         nextViewController.imageURL = sender as! String
         nextViewController.caption = captionTextField.text!
+        nextViewController.uuid = uuid
         
         
     }

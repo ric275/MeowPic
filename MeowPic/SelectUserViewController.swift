@@ -19,7 +19,7 @@ class SelectUserViewController: UIViewController, UITableViewDelegate, UITableVi
     var users : [User] = []
     var imageURL = ""
     var caption = ""
-    
+    var uuid = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,10 +56,10 @@ class SelectUserViewController: UIViewController, UITableViewDelegate, UITableVi
         
         let user = users[indexPath.row]
         
-        let pic = ["from":user.email, "caption":caption, "imageURL":imageURL]
+        let pic = ["from":FIRAuth.auth()!.currentUser!.email!, "caption":caption, "imageURL":imageURL, "uuid":uuid]
         
         FIRDatabase.database().reference().child("users").child(user.uid).child("pics").childByAutoId().setValue(pic)
+        
+        navigationController!.popToRootViewController(animated: true)
     }
-    
-    
 }

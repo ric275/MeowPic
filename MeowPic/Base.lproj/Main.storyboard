@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,12 +19,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MeowPic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krF-aT-cgQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MeowPic 🐈" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krF-aT-cgQ">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="49"/>
                                 <color key="textColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="jack@meow.com" borderStyle="roundedRect" placeholder="email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xEM-M2-bbi">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xEM-M2-bbi">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="nUS-g9-hdN"/>
                                 </constraints>
@@ -31,7 +32,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="lololol" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bEc-04-LJ4">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bEc-04-LJ4">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="lLU-CH-Fn9"/>
                                 </constraints>
@@ -47,10 +48,17 @@
                                     <action selector="GetMeowdTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JmP-7k-wzy"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A crappy Snapchat clone by Jack Taylor." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mP4-RZ-6yD">
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="xEM-M2-bbi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6g6-6v-TUB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mP4-RZ-6yD" secondAttribute="bottom" constant="10" id="BlR-9X-BIN"/>
+                            <constraint firstItem="mP4-RZ-6yD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="DVM-NQ-sW4"/>
                             <constraint firstItem="cRR-jL-yjP" firstAttribute="top" secondItem="bEc-04-LJ4" secondAttribute="bottom" constant="30" id="WRW-nz-yfE"/>
                             <constraint firstItem="bEc-04-LJ4" firstAttribute="top" secondItem="xEM-M2-bbi" secondAttribute="bottom" constant="30" id="WwW-x2-Qx3"/>
                             <constraint firstItem="bEc-04-LJ4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xe4-3W-vGv"/>
@@ -69,11 +77,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="45.42728635682159"/>
         </scene>
-        <!--MeowPic-->
+        <!--Received 🐱-->
         <scene sceneID="ZL3-2c-xpW">
             <objects>
-                <viewController id="ytz-x2-Czd" customClass="PicsViewController" customModule="MeowPic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ytz-x2-Czd" customClass="PicsViewController" customModule="MeowPic" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iwv-L5-gzo"/>
                         <viewControllerLayoutGuide type="bottom" id="4em-ni-YsT"/>
@@ -81,24 +90,78 @@
                     <view key="view" contentMode="scaleToFill" id="m8B-lH-ffA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zb7-9o-3oh">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zb7-9o-3oh" secondAttribute="trailing" id="2RY-qJ-myH"/>
+                            <constraint firstItem="4em-ni-YsT" firstAttribute="top" secondItem="zb7-9o-3oh" secondAttribute="bottom" id="Hdu-xj-9Jj"/>
+                            <constraint firstItem="zb7-9o-3oh" firstAttribute="top" secondItem="iwv-L5-gzo" secondAttribute="bottom" id="uUD-co-8KI"/>
+                            <constraint firstItem="zb7-9o-3oh" firstAttribute="leading" secondItem="m8B-lH-ffA" secondAttribute="leading" id="ygG-ap-btT"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="MeowPic" id="O0A-OA-Unf">
+                    <navigationItem key="navigationItem" title="Received 🐱" id="O0A-OA-Unf">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="aZI-x2-X48">
                             <connections>
                                 <action selector="logoutTapped:" destination="ytz-x2-Czd" id="6Xp-xt-Bac"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hpe-ND-ssY">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="hpe-ND-ssY">
                             <connections>
                                 <segue destination="yzV-FI-eN7" kind="show" id="5fe-1b-aPz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="zb7-9o-3oh" id="r7S-NF-4iN"/>
+                        <segue destination="bgn-4v-w2h" kind="show" identifier="openPicSegue" id="ZKh-F5-cO6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g24-iT-zsm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1657" y="45"/>
+        </scene>
+        <!--Open Pic View Controller-->
+        <scene sceneID="khM-8o-D0g">
+            <objects>
+                <viewController id="bgn-4v-w2h" customClass="OpenPicViewController" customModule="MeowPic" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BSM-sH-PGX"/>
+                        <viewControllerLayoutGuide type="bottom" id="p1y-Br-Jfj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tL0-ws-nNg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is me!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USJ-Ow-FmF">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="644-nh-RLp"/>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="644-nh-RLp" firstAttribute="leading" secondItem="tL0-ws-nNg" secondAttribute="leadingMargin" constant="10" id="7Kz-q5-IeP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="644-nh-RLp" secondAttribute="trailing" constant="10" id="Byl-Lf-bAy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="USJ-Ow-FmF" secondAttribute="trailing" constant="5" id="MHB-ni-JcP"/>
+                            <constraint firstItem="USJ-Ow-FmF" firstAttribute="top" secondItem="644-nh-RLp" secondAttribute="bottom" constant="10" id="RgC-VC-un6"/>
+                            <constraint firstItem="p1y-Br-Jfj" firstAttribute="top" secondItem="USJ-Ow-FmF" secondAttribute="bottom" constant="10" id="aS0-LT-wbG"/>
+                            <constraint firstItem="644-nh-RLp" firstAttribute="top" secondItem="BSM-sH-PGX" secondAttribute="bottom" constant="10" id="fOT-vf-hiT"/>
+                            <constraint firstItem="USJ-Ow-FmF" firstAttribute="leading" secondItem="tL0-ws-nNg" secondAttribute="leadingMargin" constant="5" id="wxA-kt-Ifi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="644-nh-RLp" id="9ex-OY-J59"/>
+                        <outlet property="label" destination="USJ-Ow-FmF" id="IK2-aE-wrS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3TI-Pv-zXA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1628" y="809"/>
         </scene>
         <!--Picture View Controller-->
         <scene sceneID="RnJ-Sf-tpS">
@@ -125,7 +188,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4F-1y-Nu3">
-                                <state key="normal" title="Next"/>
+                                <state key="normal" title="Send to..."/>
                                 <connections>
                                     <action selector="nextTapped:" destination="yzV-FI-eN7" eventType="touchUpInside" id="dCD-pA-HW3"/>
                                 </connections>
@@ -160,7 +223,7 @@
             </objects>
             <point key="canvasLocation" x="2515" y="41"/>
         </scene>
-        <!--Select User View Controller-->
+        <!--Select a recipient-->
         <scene sceneID="q4b-1G-91T">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="pck-EK-kfV" customClass="SelectUserViewController" customModule="MeowPic" customModuleProvider="target" sceneMemberID="viewController">
@@ -184,6 +247,7 @@
                             <constraint firstItem="2B4-j3-3UP" firstAttribute="leading" secondItem="l0l-mI-H4N" secondAttribute="leading" id="ulp-aA-0yf"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Select a recipient" id="37k-XD-L9x"/>
                     <connections>
                         <outlet property="tableView" destination="2B4-j3-3UP" id="jCP-6G-Dxc"/>
                     </connections>

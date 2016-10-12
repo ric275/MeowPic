@@ -17,6 +17,9 @@
 		04B185291DAD29B700B41081 /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B185281DAD29B700B41081 /* PictureViewController.swift */; };
 		04B1852B1DAD84E700B41081 /* SelectUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1852A1DAD84E700B41081 /* SelectUserViewController.swift */; };
 		04B1854F1DAE656500B41081 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1854E1DAE656500B41081 /* User.swift */; };
+		04B185531DAEAC1C00B41081 /* Pic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B185521DAEAC1C00B41081 /* Pic.swift */; };
+		04B185551DAEAFB900B41081 /* OpenPicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B185541DAEAFB900B41081 /* OpenPicViewController.swift */; };
+		AD2D5E13A8A3E3E7EC74234C /* Pods_MeowPic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 088B18086E44746C563DB3C3 /* Pods_MeowPic.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		04B185281DAD29B700B41081 /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
 		04B1852A1DAD84E700B41081 /* SelectUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUserViewController.swift; sourceTree = "<group>"; };
 		04B1854E1DAE656500B41081 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		04B185521DAEAC1C00B41081 /* Pic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pic.swift; sourceTree = "<group>"; };
+		04B185541DAEAFB900B41081 /* OpenPicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenPicViewController.swift; sourceTree = "<group>"; };
+		088B18086E44746C563DB3C3 /* Pods_MeowPic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeowPic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		360AAD16352C2C0C96593563 /* Pods-MeowPic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowPic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeowPic/Pods-MeowPic.debug.xcconfig"; sourceTree = "<group>"; };
 		A2D5CC27ABF2E0CA2981F53A /* Pods-MeowPic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowPic.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeowPic/Pods-MeowPic.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -41,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD2D5E13A8A3E3E7EC74234C /* Pods_MeowPic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +93,7 @@
 				04B185261DAD26BD00B41081 /* PicsViewController.swift */,
 				04B185281DAD29B700B41081 /* PictureViewController.swift */,
 				04B1852A1DAD84E700B41081 /* SelectUserViewController.swift */,
+				04B185541DAEAFB900B41081 /* OpenPicViewController.swift */,
 				04B185511DAE65DF00B41081 /* Models */,
 			);
 			name = ViewControllers;
@@ -95,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				04B1854E1DAE656500B41081 /* User.swift */,
+				04B185521DAEAC1C00B41081 /* Pic.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -111,6 +120,7 @@
 		61CFF5F12734345B6F246C02 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				088B18086E44746C563DB3C3 /* Pods_MeowPic.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -241,7 +251,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				04B185251DAD1B1000B41081 /* LoginViewController.swift in Sources */,
+				04B185531DAEAC1C00B41081 /* Pic.swift in Sources */,
 				04B185291DAD29B700B41081 /* PictureViewController.swift in Sources */,
+				04B185551DAEAFB900B41081 /* OpenPicViewController.swift in Sources */,
 				04B1854F1DAE656500B41081 /* User.swift in Sources */,
 				04B1852B1DAD84E700B41081 /* SelectUserViewController.swift in Sources */,
 				04B185271DAD26BD00B41081 /* PicsViewController.swift in Sources */,
