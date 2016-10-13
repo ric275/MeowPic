@@ -77,7 +77,7 @@ class PicsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         } else {
             
             let pic = pics[indexPath.row]
-            cell.textLabel?.text = pic.from
+            cell.textLabel?.text = "From: \(pic.from)"
             
         }
         return cell

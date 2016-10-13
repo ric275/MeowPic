@@ -31,9 +31,9 @@ class OpenPicViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         FIRDatabase.database().reference().child("users").child(FIRAuth.auth()!.currentUser!.uid).child("pics").child(pic.key).removeValue()
         
-        FIRStorage.storage().reference().child("images").child("\(pic.uuid).jpg").delete { (error) in
-            print("yolo")
-        }
+//        FIRStorage.storage().reference().child("images").child("\(pic.uuid).jpg").delete { (error) in
+//            print("Pic deleted from storage")
+//        }
     }
     
     

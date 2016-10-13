@@ -30,7 +30,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bEc-04-LJ4">
                                 <constraints>
@@ -38,7 +38,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRR-jL-yjP">
                                 <state key="normal" title="Get Meow'd">
@@ -185,7 +185,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Caption..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YET-uO-c9w">
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="yes"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4F-1y-Nu3">
                                 <state key="normal" title="Send to..."/>
@@ -247,7 +247,13 @@
                             <constraint firstItem="2B4-j3-3UP" firstAttribute="leading" secondItem="l0l-mI-H4N" secondAttribute="leading" id="ulp-aA-0yf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Select a recipient" id="37k-XD-L9x"/>
+                    <navigationItem key="navigationItem" title="Select a recipient" id="37k-XD-L9x">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="iN5-rG-TfX">
+                            <connections>
+                                <segue destination="ytz-x2-Czd" kind="show" id="eMM-T0-ija"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="2B4-j3-3UP" id="jCP-6G-Dxc"/>
                     </connections>
@@ -275,4 +281,7 @@
             <point key="canvasLocation" x="831" y="45"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="eMM-T0-ija"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -23,6 +23,8 @@ class SelectUserViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.navigationItem.hidesBackButton = true
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
